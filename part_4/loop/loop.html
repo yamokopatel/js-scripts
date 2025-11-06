@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Loop</title>
+        <script>
+            function checkNumbers(){
+                let a = document.getElementById("less").value;
+                let b = document.getElementById("more").value;
+                let outputString = "";
+                if(a < b){
+                    for(let c = a; c <= b; c++){
+                        outputString += c;
+                        outputString += "\n";
+                        console.log(c);
+                    }
+                    document.getElementById("output").innerText = outputString;
+                }else{
+                    alert("Incorrect input");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="number" id="less">
+        <input type="number" id="more">
+        <button onclick="checkNumbers()">Check numders</button>
+        <p id="output"></p>
+    </body>
+</html>
